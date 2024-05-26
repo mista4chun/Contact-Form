@@ -10,12 +10,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Contact Form</title>
   </head>
 
   <body class="bg-LightGreen flex items-center justify-center min-h-screen">
-    <div class="bg-White rounded-xl p-6 shadow-lg w-full max-w-sm md:max-w-2xl">
+    <div
+      class="bg-White rounded-2xl p-8 md:p-10 shadow-lg w-full max-w-sm md:max-w-2xl"
+    >
       <h1 class="text-darkGray text-3xl font-bold mb-6">Contact Us</h1>
       <form id="contactForm" class="space-y-4" novalidate>
         <div
@@ -32,6 +34,7 @@
               class="rounded-md border border-mediumGrey p-2.5 focus:ring-Green focus:border-Green hover:border-Green outline-none md:1/2"
               required
               aria-describedby="firstNameError"
+              aria-label="First Name"
             />
             <span id="nameError" class="text-Red text-sm h-4 hidden"
               >This field is required</span
@@ -48,6 +51,7 @@
               class="rounded-md border border-mediumGrey p-2.5 focus:ring-Green focus:border-Green hover:border-Green outline-none md:1/2"
               required
               aria-describedby="lastNameError"
+              aria-label="Last Name"
             />
             <span id="lastNameError" class="text-Red text-sm h-4 hidden"
               >This field is required</span
@@ -65,6 +69,7 @@
             class="rounded-md border border-mediumGrey p-2.5 focus:ring-Green focus:border-Green hover:border-Green outline-none"
             required
             aria-describedby="emailError"
+            aria-label="Email Address"
           />
           <span id="emailError" class="text-Red text-sm h-4 hidden"
             >Please enter a valid email address
@@ -115,17 +120,18 @@
             >Please select a query type</span
           >
         </fieldset>
-        <div>
+        <div class="pb-4">
           <label for="message" class="block text-darkGrey"
             >Message <span class="text-Green"> *</span></label
           >
           <textarea
             id="message"
             name="message"
-            rows="6"
+            rows="4"
             class="mt-2 block w-full p-2 border border-mediumGrey rounded-md shadow-sm focus:ring-Green focus:border-Green hover:border-Green outline-none"
             required
             aria-describedby="messageError"
+            aria-label="message"
           ></textarea>
           <span id="messageError" class="text-Red text-sm h-4 hidden"
             >Message is required</span
@@ -141,6 +147,7 @@
               class="focus:border-Green h-4 w-4 text-Green border-mediumGrey custom-checkbox"
               required
               aria-describedby="consentError"
+              aria-label="I consent to being contacted by the team"
             />
           </div>
           <div class="ml-4 text-sm">
@@ -157,7 +164,7 @@
         <div>
           <button
             type="submit"
-            class="w-full mt-3 bg-Green font-semibold text-white p-3.5 rounded-md shadow-sm hover:bg-green-950 focus:outline-none focus:ring-2 focus:ring-Green"
+            class="w-full mt-5 bg-Green font-semibold text-white p-3.5 rounded-md shadow-sm hover:bg-green-950 focus:outline-none focus:ring-2 focus:ring-Green"
           >
             Submit
           </button>
